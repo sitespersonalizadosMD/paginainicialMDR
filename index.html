@@ -8,49 +8,64 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: #0B0B1A;
     color: white;
+}
+
+section {
+    padding: 60px 20px;
     text-align: center;
 }
 
-.container {
-    padding: 20px;
-}
-
 h1 {
-    font-size: 28px;
-}
-
-.logo {
     font-size: 32px;
-    font-weight: bold;
 }
 
-.logo span:nth-child(1){ color:#3B82F6;}
-.logo span:nth-child(2){ color:#FACC15;}
-.logo span:nth-child(3){ color:#E5E7EB;}
+p {
+    color: #ccc;
+}
 
 .btn {
-    display: block;
     background: #25D366;
     color: white;
-    padding: 15px;
-    margin: 15px auto;
-    width: 80%;
-    border-radius: 10px;
+    padding: 15px 25px;
+    border-radius: 30px;
     text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
     font-weight: bold;
 }
 
-.box {
-    background: #111827;
-    padding: 15px;
-    margin: 15px;
-    border-radius: 10px;
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-a.link {
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: #111827;
+    padding: 20px;
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.link {
     color: #3B82F6;
 }
 </style>
@@ -58,40 +73,46 @@ a.link {
 
 <body>
 
-<div class="container">
-
-<div class="logo">
-<span>M</span><span>D</span><span>R</span> Sites
-</div>
-
-<h2>Transformo negócios em presença digital 🚀</h2>
-
+<section class="hero">
+<h1>Seu negócio precisa de um site profissional.</h1>
+<p>Eu desenvolvo sites modernos que aumentam suas vendas.</p>
 <a class="btn" href="https://wa.me/5521965248272">Falar no WhatsApp</a>
+</section>
 
-<div class="box">
-<p>
-Crio sites personalizados para qualquer tipo de negócio: restaurantes, lojas e serviços.
-Tudo integrado ao WhatsApp para facilitar suas vendas.
-</p>
+<section>
+<h2>Por que ter um site?</h2>
+
+<div class="cards">
+<div class="card">Mais clientes todos os dias</div>
+<div class="card">Mais profissionalismo</div>
+<div class="card">Pedidos direto no WhatsApp</div>
 </div>
+</section>
 
-<div class="box">
-<p>✔ Site profissional<br>
-✔ Mais clientes<br>
-✔ Atendimento direto pelo WhatsApp<br>
-✔ Funciona no celular</p>
-</div>
-
-<div class="box">
-<p>Veja um exemplo real 👇</p>
+<section>
+<h2>Veja um exemplo</h2>
 <a class="link" href="https://sitespersonalizadosmd.github.io/cantinhodobaiao/" target="_blank">
-Abrir exemplo
+Abrir demonstração
 </a>
-</div>
+</section>
 
+<section>
+<h2>Pronto para crescer no digital?</h2>
 <a class="btn" href="https://wa.me/5521965248272">Quero meu site 🚀</a>
+</section>
 
-</div>
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if(top < window.innerHeight - 50){
+            card.classList.add('show');
+        }
+    });
+});
+</script>
 
 </body>
 </html>

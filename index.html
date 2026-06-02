@@ -204,7 +204,61 @@ Ver site de cliente (Loja)
     <div class="card">🛠️ Suporte mensal incluso</div>
 </div>
 </section>
-    
+
+<h3>🚀 Criação do Site</h3>
+<p style="font-size:28px;font-weight:800;color:#ffae00;">
+R$ 149,90
+</p>
+<p>
+Em até 3x sem juros no cartão
+</p>
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="100">
+<h3>🛠️ Mensalidade</h3>
+<p style="font-size:28px;font-weight:800;color:#ffae00;">
+R$ 69,90/mês
+</p>
+<p>
+Hospedagem, suporte e manutenção inclusos
+</p>
+</div>
+
+</div>
+</section>
+    <section>
+<h2 data-aos="fade-up">Solicite seu orçamento</h2>
+
+<form id="orcamentoForm" style="
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+">
+
+<input type="text" id="nome" placeholder="Seu nome" required>
+
+<input type="text" id="ramo" placeholder="Ramo do negócio" required>
+
+<input type="number" id="produtos" placeholder="Quantidade de produtos/serviços" required>
+
+<input type="text" id="cupom" placeholder="Possui cupom de desconto?">
+
+<div id="resultado" style="
+background:rgba(255,255,255,0.08);
+padding:20px;
+border-radius:15px;
+display:none;
+">
+</div>
+
+<button type="button" class="btn" onclick="calcularOrcamento()">
+Calcular orçamento
+</button>
+
+</form>
+</section>
 
 <section class="cta">
 <h2 data-aos="fade-up">Pronto para vender mais?</h2>
@@ -236,6 +290,54 @@ z-index:999;
 ">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="30">
 </a>
+
+    <script>
+
+function calcularOrcamento() {
+
+let cupom = document
+.getElementById("cupom")
+.value
+.trim()
+.toUpperCase();
+
+let criacao = 149.90;
+let mensalidade = 69.90;
+
+if(cupom === "ALEXABARROS") {
+    criacao = 129.90;
+    mensalidade = 49.90;
+}
+
+document.getElementById("resultado").style.display = "block";
+
+document.getElementById("resultado").innerHTML = `
+<h3>Seu orçamento</h3>
+
+<p>
+<strong>Criação do site:</strong>
+R$ ${criacao.toFixed(2)}
+</p>
+
+<p>
+<strong>Parcelamento:</strong>
+até 3x de R$ ${(criacao/3).toFixed(2)}
+</p>
+
+<p>
+<strong>Mensalidade:</strong>
+R$ ${mensalidade.toFixed(2)}/mês
+</p>
+
+<a class="btn"
+href="https://wa.me/5521965248272?text=Olá,%20fiz%20uma%20simulação%20no%20site.%20Criação:%20R$${criacao}%20-%20Mensalidade:%20R$${mensalidade}">
+Solicitar meu site
+</a>
+`;
+
+}
+
+</script>
 </body>
 </html>
 

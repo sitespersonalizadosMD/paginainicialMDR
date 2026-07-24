@@ -965,3 +965,92 @@ transform:none;
 }
 
 }
+/*=========================
+TECNOLOGIAS
+=========================*/
+
+#tech{
+
+    padding:140px 0;
+
+}
+
+.tech-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:70px;
+
+}
+   .tech-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    backdrop-filter:blur(20px);
+
+}
+   .tech-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 15px 45px rgba(255,107,0,.18);
+
+}
+   .tech-card img{
+
+    width:70px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+}
+   .tech-card h3{
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+   .tech-card p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+   @media(max-width:1000px){
+
+.tech-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.tech-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}

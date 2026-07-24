@@ -855,3 +855,113 @@ grid-template-columns:1fr;
 }
 
 }
+/*============================
+PLANOS
+============================*/
+
+.plans-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+margin-top:70px;
+
+}
+   .plan-card{
+
+position:relative;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:25px;
+
+padding:50px;
+
+transition:.35s;
+
+backdrop-filter:blur(18px);
+
+}
+   .plan-card:hover{
+
+transform:translateY(-12px);
+
+}
+   .featured{
+
+border:2px solid var(--primary);
+
+transform:scale(1.04);
+
+}
+   .price{
+
+margin:30px 0;
+
+font-size:18px;
+
+color:var(--text-light);
+
+}
+
+.price span{
+
+display:block;
+
+font-size:54px;
+
+font-weight:800;
+
+color:var(--primary);
+
+margin-top:10px;
+
+}
+   .plan-card ul{
+
+display:grid;
+
+gap:15px;
+
+margin-bottom:40px;
+
+}
+   .badge-premium{
+
+position:absolute;
+
+top:-15px;
+
+right:30px;
+
+background:var(--primary);
+
+padding:10px 20px;
+
+border-radius:999px;
+
+font-size:13px;
+
+font-weight:700;
+
+}
+   @media(max-width:900px){
+
+.plans-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.featured{
+
+transform:none;
+
+}
+
+}

@@ -192,3 +192,34 @@ section{
     #09090B;
 
 }
+/*======================
+NAVBAR
+=======================*/
+
+#navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    transition:.35s;
+
+}
+
+.nav-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:90px;
+
+}

@@ -1677,3 +1677,58 @@ padding:25px;
 }
 
 }
+/*=====================================
+MENU MOBILE
+=====================================*/
+
+.mobile-menu{
+
+position:fixed;
+
+top:75px;
+
+left:-100%;
+
+width:100%;
+
+height:calc(100vh - 75px);
+
+background:#09090B;
+
+display:flex;
+
+flex-direction:column;
+
+padding:40px 30px;
+
+gap:25px;
+
+transition:.35s;
+
+z-index:999;
+
+}
+
+.mobile-menu.active{
+
+left:0;
+
+}
+
+.mobile-menu a{
+
+font-size:20px;
+
+font-weight:600;
+
+padding:10px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.mobile-menu .btn{
+
+margin-top:20px;
+
+}

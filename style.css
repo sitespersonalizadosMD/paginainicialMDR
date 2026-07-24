@@ -1,1 +1,31 @@
+/* ===========================
+   MDR SITES
+   Design System
+=========================== */
 
+:root{
+
+    --primary:#ff6b00;
+    --primary-light:#ff8b33;
+
+    --dark:#09090B;
+    --dark-light:#121217;
+
+    --card:rgba(255,255,255,.05);
+
+    --border:rgba(255,255,255,.08);
+
+    --text:#FFFFFF;
+    --text-light:#BDBDBD;
+
+    --success:#22c55e;
+
+    --radius:22px;
+
+    --shadow:0 15px 45px rgba(0,0,0,.35);
+
+    --transition:.35s;
+
+    --max-width:1280px;
+
+}

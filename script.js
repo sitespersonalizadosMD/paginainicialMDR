@@ -26,3 +26,39 @@ faqs.forEach(faq => {
     });
 
 });
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+
+    mobileMenu.classList.toggle("active");
+
+    if (mobileMenu.classList.contains("active")) {
+
+        menuToggle.innerHTML = "✕";
+
+        document.body.style.overflow = "hidden";
+
+    } else {
+
+        menuToggle.innerHTML = "☰";
+
+        document.body.style.overflow = "auto";
+
+    }
+
+});
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+
+        menuToggle.innerHTML = "☰";
+
+        document.body.style.overflow = "auto";
+
+    });
+
+});

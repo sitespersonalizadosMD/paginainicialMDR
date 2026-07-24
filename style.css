@@ -1170,3 +1170,88 @@ grid-template-columns:1fr;
 }
 
 }
+/*=========================
+FAQ
+=========================*/
+
+#faq{
+
+    padding:140px 0;
+
+}
+
+.faq-container{
+
+    max-width:900px;
+
+    margin:70px auto 0;
+
+}
+   .faq-item{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+}
+   .faq-question{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    padding:25px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+}
+   .faq-question span{
+
+    font-size:30px;
+
+    color:var(--primary);
+
+}
+   .faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+   .faq-answer p{
+
+    padding:0 25px 25px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+   .faq-item.active .faq-answer{
+
+    max-height:300px;
+
+}

@@ -1777,3 +1777,44 @@ margin-top:20px;
     border-radius:24px;
 
 }
+   @media (max-width:768px){
+
+#numbers{
+
+padding:70px 0 50px;
+
+}
+
+.numbers-grid{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
+.number-card{
+
+padding:30px 20px;
+
+height:auto;
+
+min-height:unset;
+
+}
+
+.number-card h3{
+
+font-size:3rem;
+
+}
+
+.number-card p{
+
+font-size:16px;
+
+}
+
+}

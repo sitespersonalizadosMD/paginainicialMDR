@@ -458,14 +458,21 @@ HERO
 .hero-image img{
 
     width:100%;
-
     max-width:650px;
 
     position:relative;
-
     z-index:2;
 
     animation:float 5s ease-in-out infinite;
+
+    border-radius:30px;
+
+    border:2px solid rgba(255,107,0,.65);
+
+    box-shadow:
+        0 0 0 5px rgba(255,107,0,.08),
+        0 0 40px rgba(255,107,0,.18),
+        0 20px 50px rgba(0,0,0,.45);
 
 }
 .circle{
@@ -1780,5 +1787,31 @@ font-size:16px;
     padding:80px 0;
 
 }
+
+}
+.hero-frame{
+
+    padding:8px;
+
+    border-radius:36px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,107,0,.9),
+        rgba(255,139,51,.45)
+    );
+
+    box-shadow:
+        0 0 35px rgba(255,107,0,.20);
+
+}
+
+.hero-frame img{
+
+    display:block;
+
+    width:100%;
+
+    border-radius:28px;
 
 }
